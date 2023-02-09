@@ -23,7 +23,7 @@ public class PlayerControllor : MonoBehaviour
     bool goJump = false;          //점프중 체크
     bool onGround = false;        //지면인지 체크 
 
-    string gameState = "playing";
+    public static string gameState = "playing";
     
 
     
@@ -93,7 +93,7 @@ public class PlayerControllor : MonoBehaviour
 
         if (onGround)
         {
-            Debug.Log("땅");
+            Debug.Log("땅에서있음");
             if (axisH == 0)
             {
                 nowAni = idleAni;
