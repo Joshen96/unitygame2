@@ -78,6 +78,7 @@ public class PlayerControllor : MonoBehaviour
 
         //이동 점프 
         onGround = Physics2D.Linecast(transform.position, transform.position - (transform.up *0.1f), groundLayer);  //땅인지판별
+        //오브젝트의 0,0으로부터 라인을 쏴서 탐지 (0,-0.1)즉 아래로 탐지함
         if (onGround || axisH != 0) // 이동
         {
             player_rigi.velocity = new Vector2(axisH * speed, player_rigi.velocity.y);
