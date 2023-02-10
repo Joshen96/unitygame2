@@ -48,22 +48,49 @@ public class MoveingBlock : MonoBehaviour
             float y = transform.position.y;
             bool endX = false;
             bool endY = false;
-
-            if ((perDx>=0.0f&&x>=defpos.x+move_X)|| perDx <0.0f && x<=defpos.x+move_X)
+            
+            if (isReverse)
             {
-                endX = true;
+
+                if ((perDx >= 0.0f && x <= defpos.x + move_X) || perDx < 0.0f && x >= defpos.x + move_X)
+                {
+                    endX = true;
+                }
+                if ((perDy >= 0.0f && y <= defpos.y + move_Y) || perDy < 0.0f && y >= defpos.y + move_Y)
+                {
+                    endY = true;
+                }
+
+
+                Vector3 v = new Vector3(-perDx, -perDy, defpos.z);
+                transform.Translate(v);
             }
-            if ((perDy >= 0.0f && y >= defpos.y + move_Y) || perDy < 0.0f && y <= defpos.y + move_Y)
+            else
             {
-                endY = true;
+
+                if ((perDx >= 0.0f && x >= defpos.x + move_X) || perDx < 0.0f && x <= defpos.x + move_X)
+                {
+                    endX = true;
+                }
+                if ((perDy >= 0.0f && y >= defpos.y + move_Y) || perDy < 0.0f && y <= defpos.y + move_Y)
+                {
+                    endY = true;
+                }
+                Vector3 v = new Vector3(perDx, perDy, defpos.z);
+                transform.Translate(v);
             }
+            
+            
 
-
-            Vector3 v = new Vector3(perDx, perDy, defpos.z);
-            transform.Translate(v);
 
             if (endX && endY)
             {
+                if (isReverse)
+                {
+                    transform.position = defpos;
+                }
+                isReverse = !isReverse;
+
                 isCanMove = false;
                 if (isMoveWhenOn == false)
                 {
@@ -87,7 +114,7 @@ public class MoveingBlock : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            collision.transform.SetParent(transform);  //이오브젝트의 포지션을 충돌한 플레이어의 부모로세팅
+            collision.transform.SetParent(this.transform);  //이오브젝트의 포지션을 충돌한 플레이어의 부모로세팅
             if (isMoveWhenOn)
             {
                 isCanMove = true;
