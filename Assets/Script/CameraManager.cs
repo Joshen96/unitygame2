@@ -11,6 +11,8 @@ public class CameraManager : MonoBehaviour
     public float bottomLimit = 0.0f;
     public GameObject subBackScreen; 
     //화면밖으로 나가면 죽는 것 구현 ex타임어택 이동
+
+
     public bool isForceScrollX = false; //x축 강제 스크롤 플래그
     public float forceScrollSpeedX = -0.5f; //1초간 움직일 x의 거리
     public bool isForceScrollY = false; //y축 강제 스크롤 플래그

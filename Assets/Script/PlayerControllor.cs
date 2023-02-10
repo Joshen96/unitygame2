@@ -24,6 +24,8 @@ public class PlayerControllor : MonoBehaviour
     bool onGround = false;        //지면인지 체크 
 
     public static string gameState = "playing";
+
+    public int score = 0;
     
 
     
@@ -125,34 +127,48 @@ public class PlayerControllor : MonoBehaviour
         {
             Goal();
         }
-        if(collision.gameObject.tag =="Dead")
+        if (collision.gameObject.tag == "Dead")
         {
             Dead();
         }
+        if (collision.gameObject.tag == "ScoreItem")
+        {
+            Itemdata item = collision.gameObject.GetComponent<Itemdata>();
+            score = item.su;
+
+
+        }
     }
-    void Goal()
-    {
-        animator.Play(clearAni);
-        gameState = "gameClear";
-        GameStop();
-    }
+
+
+        void Goal()
+        {
+            animator.Play(clearAni);
+            gameState = "gameClear";
+            GameStop();
+        }
+
+        void Dead()
+        {
+            animator.Play(overAni);
+            gameState = "gameOver";
+            GameStop();
+            GetComponent<CapsuleCollider2D>().enabled = false; //충동감지못함
+            player_rigi.AddForce(new Vector2(0, 5), ForceMode2D.Impulse);
+
+
+        }
+
+        public void GameStop()
+        {
+            player_rigi.velocity = new Vector2(0, 0);
+        }
+        
+        
+        void Jump()
+        {
+            goJump = true;
+
+        }
     
-    void Dead()
-    {
-        animator.Play(overAni);
-        gameState = "gameOver";
-        GameStop();
-        GetComponent<CapsuleCollider2D>().enabled = false; //충동감지못함
-        player_rigi.AddForce(new Vector2(0, 5), ForceMode2D.Impulse);
-
-    }
-    void GameStop()
-    {
-        player_rigi.velocity = new Vector2(0, 0);
-    }
-    void Jump()
-    {
-        goJump = true;
-
-    }
 }

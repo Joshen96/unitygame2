@@ -147,7 +147,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d787e095c8ea79a40aa5885ab7d27e74, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 21acbe2a02006b14bac530068aaa2726, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -226,7 +226,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 567a6d8c3b5d7fc47bd25f093c645590, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1ca901bed82804e4abd7a6d72855821f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -503,8 +503,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainImage: {fileID: 8315007544795159139}
-  gameOver: {fileID: 21300000, guid: c3bbbe7cb18b1534b8a7d26e5db160b8, type: 3}
-  gameClear: {fileID: 21300000, guid: 230f4553e5ebf804ca9771ba3e12cc95, type: 3}
+  gameOver: {fileID: 21300000, guid: 85e015c7e3590444387a706f0a4a9b47, type: 3}
+  gameClear: {fileID: 21300000, guid: 915f0219097498641a07a3374a2959bb, type: 3}
   panel: {fileID: 8315007546277118423}
   restartButton: {fileID: 8315007545541449726}
   nextButton: {fileID: 8315007544415814234}
@@ -672,7 +672,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3c622520b69e49f47942cdf694ec933a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: becf665dc55f959418757f5b50d5946a, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -751,7 +751,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 567a6d8c3b5d7fc47bd25f093c645590, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1ca901bed82804e4abd7a6d72855821f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
