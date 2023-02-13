@@ -52,11 +52,11 @@ public class MoveingBlock : MonoBehaviour
             if (isReverse)
             {
 
-                if ((perDx >= 0.0f && x <= defpos.x + move_X) || perDx < 0.0f && x >= defpos.x + move_X)
+                if ((perDx >= 0.0f && x <= defpos.x ) || perDx < 0.0f && x >= defpos.x )
                 {
                     endX = true;
                 }
-                if ((perDy >= 0.0f && y <= defpos.y + move_Y) || perDy < 0.0f && y >= defpos.y + move_Y)
+                if ((perDy >= 0.0f && y <= defpos.y ) || perDy < 0.0f && y >= defpos.y )
                 {
                     endY = true;
                 }
@@ -94,7 +94,7 @@ public class MoveingBlock : MonoBehaviour
                 isCanMove = false;
                 if (isMoveWhenOn == false)
                 {
-                    GameObject.Find("Player").transform.SetParent(null);
+                    //GameObject.Find("Player").transform.SetParent(null); 
                     Invoke("Move", wait_t);
 
                 }
