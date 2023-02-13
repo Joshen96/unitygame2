@@ -135,6 +135,7 @@ public class PlayerControllor : MonoBehaviour
         {
             Itemdata item = collision.gameObject.GetComponent<Itemdata>();
             score = item.su;
+            Destroy(collision.gameObject);
 
 
         }

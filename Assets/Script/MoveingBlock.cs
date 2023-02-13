@@ -90,11 +90,13 @@ public class MoveingBlock : MonoBehaviour
                     transform.position = defpos;
                 }
                 isReverse = !isReverse;
-
+                
                 isCanMove = false;
                 if (isMoveWhenOn == false)
                 {
+                    GameObject.Find("Player").transform.SetParent(null);
                     Invoke("Move", wait_t);
+
                 }
             }
 
