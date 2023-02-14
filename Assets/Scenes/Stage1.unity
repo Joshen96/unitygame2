@@ -495,7 +495,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 108744511695904729, guid: 70d4acc9c3dde894689243bdca51896e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 108744511695904729, guid: 70d4acc9c3dde894689243bdca51896e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -626,9 +626,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5335571319395976645, guid: 34fd93bb2bd3f274382aac8ada06ac07, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 519420031}
     - target: {fileID: 5335571319676737997, guid: 34fd93bb2bd3f274382aac8ada06ac07, type: 3}
       propertyPath: sceneName
-      value: Stage2
+      value: stage2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5335571320265624673, guid: 34fd93bb2bd3f274382aac8ada06ac07, type: 3}
+      propertyPath: sceneName
+      value: Stage1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34fd93bb2bd3f274382aac8ada06ac07, type: 3}
@@ -653,7 +661,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 108744511695904729, guid: 70d4acc9c3dde894689243bdca51896e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 108744511695904729, guid: 70d4acc9c3dde894689243bdca51896e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -710,7 +718,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 108744511695904729, guid: 70d4acc9c3dde894689243bdca51896e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 108744511695904729, guid: 70d4acc9c3dde894689243bdca51896e, type: 3}
       propertyPath: m_LocalRotation.w

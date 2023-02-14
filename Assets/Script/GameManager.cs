@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI; //ui사용시 
+using UnityEngine.SceneManagement;
+
 public class GameManager : MonoBehaviour
 {
     public GameObject mainImage;
@@ -11,6 +13,8 @@ public class GameManager : MonoBehaviour
     public GameObject restartButton;
     
     public GameObject nextButton;
+
+    public string lastScene;
 
     Image titleImage;
 
@@ -83,9 +87,11 @@ public class GameManager : MonoBehaviour
             totalScore += stageScore;
             stageScore = 0;
             UpdateScore();
+            if(SceneManager.GetActiveScene().name == lastScene) //다시 점수 하기위해
 
-            
-
+            {
+                totalScore = 0;
+            }
         }
         else if(PlayerControllor.gameState == "gameOver") //게임오버시
         {

@@ -436,11 +436,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainImage: {fileID: 5335571320072847859}
-  gameOver: {fileID: 21300000, guid: 85e015c7e3590444387a706f0a4a9b47, type: 3}
-  gameClear: {fileID: 21300000, guid: 915f0219097498641a07a3374a2959bb, type: 3}
+  gameOver: {fileID: 21300000, guid: ccf79bca471af594682136ea0d745ae4, type: 3}
+  gameClear: {fileID: 21300000, guid: 11f21a29caa0d244a87b5482770f3e29, type: 3}
   panel: {fileID: 5335571321001302599}
   restartButton: {fileID: 5335571320265624686}
   nextButton: {fileID: 5335571319676737994}
+  lastScene: stage2
   timeBar: {fileID: 6825117941607080603}
   timeText: {fileID: 4138551417759380990}
   scoreText: {fileID: 4138551417858644570}
@@ -688,7 +689,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c265d3139a582ec47aa31a7db0cde688, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: 
+  sceneName: Title
 --- !u!1 &5335571320072847859
 GameObject:
   m_ObjectHideFlags: 0
@@ -912,7 +913,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c265d3139a582ec47aa31a7db0cde688, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Stage1
+  sceneName: Stage2
 --- !u!1 &5335571321001302599
 GameObject:
   m_ObjectHideFlags: 0
