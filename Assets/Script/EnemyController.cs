@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
 
-    public int killpoint = 100;
+    
     Animator animator;
     public string Dieani = "EnemyDie";
 
@@ -68,6 +68,9 @@ public class EnemyController : MonoBehaviour
 
             Diemove();
             Destroy(gameObject, 1);
+
+            //Á¡¼ö;
+            
         }
         else
         {

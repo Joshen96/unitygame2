@@ -90,7 +90,8 @@ public class GameManager : MonoBehaviour
             totalScore += stageScore;
             stageScore = 0;
             UpdateScore();
-            if(SceneManager.GetActiveScene().name == lastScene) //다시 점수 하기위해
+
+            if(SceneManager.GetActiveScene().name == lastScene) //마지막스테이지 클리어시 다시 점수 하기위해
 
             {
                 totalScore = 0;
@@ -98,7 +99,7 @@ public class GameManager : MonoBehaviour
         }
         else if(PlayerControllor.gameState == "gameOver") //게임오버시
         {
-            mainImage.SetActive(true);
+            mainImage.SetActive(true); 
             panel.SetActive(true);
             Button btNext = nextButton.GetComponent<Button>();
             btNext.interactable = false;  //게임 오버시 다음버튼이 못눌리게 비활성화
