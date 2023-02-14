@@ -66,7 +66,9 @@ public class PlayerControllor : MonoBehaviour
 
         if (Input.GetButtonDown("Jump")/*||Input.GetKey("space")*/)
         {
-            Jump();
+
+            goJump = true;
+            //Jump();
         }
 
     }
@@ -85,11 +87,11 @@ public class PlayerControllor : MonoBehaviour
         {
             player_rigi.velocity = new Vector2(axisH * speed, player_rigi.velocity.y);
         }
-        if(onGround && goJump) //점프
-        {
-            Vector2 JumpPw = new Vector2(0, jump);
-            player_rigi.AddForce(JumpPw, ForceMode2D.Impulse);
-            goJump = false; //점프종료 체크
+        if(onGround && goJump) //점프  땅에 붙어야지만 가능
+         {
+           
+            player_rigi.AddForce(new Vector2(0, jump), ForceMode2D.Impulse);
+            goJump = false; //점프종료 체크 
         }
 
 

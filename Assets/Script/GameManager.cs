@@ -6,22 +6,24 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject mainImage;
-    public Sprite gameOver;
-    public Sprite gameClear;
+    // ui에 사용될 이미지와 버튼
+    public GameObject mainImage; //게임스타트 게임클리어 게임오버를 담을 ui의 게임오브젝트 
+    public Sprite gameOver;    // mainImage오브젝트 스프라이트에 담을 게임오버스프라이트
+    public Sprite gameClear;   // mainImage오브젝트 스프라이트에 담을 게임클리어스프라이트
     public GameObject panel;
     public GameObject restartButton;
-    
     public GameObject nextButton;
-
-    public string lastScene;
-
-    Image titleImage;
-
-    string oldGameState;
-
     public GameObject timeBar;
     public GameObject timeText;
+
+    // 마지막 씬알기위함 
+    public string lastScene;
+    
+    //
+   
+    string oldGameState;
+
+    //타임컨트롤러
     TimeController timeCnt;
 
 
@@ -37,9 +39,10 @@ public class GameManager : MonoBehaviour
 
         panel.SetActive(false);
 
-        oldGameState = PlayerControllor.gameState;
+       // oldGameState = PlayerControllor.gameState;
 
         timeCnt = GetComponent<TimeController>();
+
         if(timeCnt != null)
         {
             if(timeCnt.gameTime == 0.0f)
@@ -48,7 +51,7 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        UpdateScore();
+        UpdateScore(); //실시간 점수업데이트
 
     }
     void UpdateScore()
